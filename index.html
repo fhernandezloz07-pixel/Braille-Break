@@ -1,12 +1,81 @@
 <!DOCTYPE html>
-<html lang = "en"> <!--This is simply to thow that this webPage was written in English -->
+<html lang = "en"> <!--This is simply to show that this webPage was written in English -->
   <head>
+    <!--
+  Description:
+  This is a Calculator project for me to learn basic HTML, css, and Java principles.
+  The code will include a general Calculator where the user can make simple order of operations calculations.
+  The code will also include another calculator where the user can make more complicated operations with calculus principles.
+  If both of the calculators are done accurately, the code will also integrate audio features for various purposes:
+       - Aesthetic purposes
+       - So a person that is sight impaired can have access to the answer through audio generation of the answer.
+  If all three of these are done sucessfully I will then attemt to make it pleasing to the eye.
+  Objectives: 
+  1. LEARNING! These languages are foreign to me so I want to use this project to learn more about the languages
+       - I will use a lot of commenting to aid my learning and hopefully make it easier for beginners to follow my code!
+  2. Create a calculator that anybody can use, even if you have trouble seeing!
+  3. Have fun, this is my first project on gitHub and I just want to enjoy the process for future projects.
+  
+  Credit to: 
+    
+  1. Youtube Channel Bro Code. Used for helping me build the first general calculator
+  2. Copilot: Used for asking coding questions, aiding to correct my errors, and beginner source code guidelines. 
+  -->
     <title>Document</title> <!--Might change this later but its basic setup-->
     <meta charset="UTF-8"> <!--How this program will be read.-->
-    <link rel="styesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!---This is so my HTML file can acess the others-->
   </head>
   <body>
-    <h1>Description:</h1>
+    <!--This code is to create the drop-Down feature to switch between Calculators-->
+    <select id="calculatorDropdown" onchange="switchCalculator()"> 
+      <option value="generalC">General Calculator</option>
+      <option value="calculusC">Calculus Calculator</option>
+    </select>
     
+    <!--First Div: for my General-Calculator -->
+    <div id="General-Calculator"> <!--div is the container with unique name -->
+      <input id="outputBox" readonly><!--This is a name I'll call back   to show the numbers and results in my project.-->
+    <!--the readonly is added to restrict the user from tryping in my outtput Box-->
+      <div>
+        <input id="keys"> <!--naming the header where the answer calculations will be displayed-->
+    <!--Typse of buttons I will include in my code-->
+        <!--Function keys: keys that perform specific mathematical functions-->
+        <!--Numberic Keys: keys for inputting numbers-->
+        <!--Operation keys: Keys for arithmetic operatiors like multiplication and division-->
+        <button onclick="onScreen('7')">7</button> <!--I put a plus sign on the screen-->
+        <button onclick="onScreen('8')">8</button>
+        <button onclick="onScreen('9')">9</button>
+        <button onclick="onScreen('+')">+</button>
+        <button onclick="onScreen('4')">4</button>
+        <button onclick="onScreen('5')">5</button>
+        <button onclick="onScreen('6')">6</button>
+        <button onclick="onScreen('-')">-</button>
+        <button onclick="onScreen('1')">1</button>
+        <button onclick="onScreen('2')">2</button>
+        <button onclick="onScreen('3')">3</button>
+        <button onclick="onScreen('*')">*</button>
+        <button onclick="onScreen('.')">.</button>
+        <button onclick="onScreen('0')">0</button>
+        <button onclick="evaluate()">=</button> <!--our calculation button on the screen-->
+        <button onclick="onScreen('/')">/</button>
+        <button onclick="clearOutputBox()">C</button> <!--button to clear the screen-->
+        <!--I put them in order of how i want them to be displayed on my calculator from left to right and top to bottom-->
+       </div>
+      
+  <!--  </div>
+    <!--Second Div: for my Calculus-Calculator 
+    <div id= "Calculus-Calculator" style="display:none;"> <!--doesn't display this calculator until the user selects it
+   </div> -->
+
+
+
+
+
+
+
+
+
+
+      
   </body>
 </html>
