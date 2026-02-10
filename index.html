@@ -2,7 +2,7 @@
 <html lang = "en"> <!--This is simply to show that this webPage was written in English -->
   <head>
     <!--
-  Description:
+  Description: 
   This is a Calculator project for me to learn basic HTML, css, and Java principles.
   The code will include a general Calculator where the user can make simple order of operations calculations.
   The code will also include another calculator where the user can make more complicated operations with calculus principles.
@@ -21,8 +21,10 @@
   1. Youtube Channel Bro Code. Used for helping me build the first general calculator
   2. Copilot: Used for asking coding questions, aiding to correct my errors, and beginner source code guidelines. 
   -->
-    <title>Document</title> <!--Might change this later but its basic setup-->
+    
     <meta charset="UTF-8"> <!--How this program will be read.-->
+    <meta name= "Viewport" content="width=device-width, intitial-scale=1.0">
+    <title>Document</title> <!--Basic name...might change later-->
     <link rel="stylesheet" href="styles.css"> <!---This is so my HTML file can acess the others-->
   </head>
   <body>
@@ -36,8 +38,7 @@
     <div id="General-Calculator"> <!--div is the container with unique name -->
       <input id="outputBox" readonly><!--This is a name I'll call back   to show the numbers and results in my project.-->
     <!--the readonly is added to restrict the user from tryping in my outtput Box-->
-      <div>
-        <input id="keys"> <!--naming the header where the answer calculations will be displayed-->
+      <div id="keys"> <!--I will need this later to call in css to modify placement of buttons-->
     <!--Typse of buttons I will include in my code-->
         <!--Function keys: keys that perform specific mathematical functions-->
         <!--Numberic Keys: keys for inputting numbers-->
@@ -60,12 +61,11 @@
         <button onclick="onScreen('/')">/</button>
         <button onclick="clearOutputBox()">C</button> <!--button to clear the screen-->
         <!--I put them in order of how i want them to be displayed on my calculator from left to right and top to bottom-->
-       </div>
+      </div>
       
   <!--  </div>
-    <!--Second Div: for my Calculus-Calculator 
-    <div id= "Calculus-Calculator" style="display:none;"> <!--doesn't display this calculator until the user selects it
-   </div> -->
+    Second Div: for my Calculus-Calculator 
+   <div id= "Calculus-Calculator" style="display:none;"> 
 
 
 
