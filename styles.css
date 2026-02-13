@@ -1,6 +1,64 @@
-button{ 
-  width: 100px; 
-  height: 100px;
-  border-radius: 50px;
+body{
+  margin: 0; /*to alin with the edge*/
+   /*display: flex; is not used here because mine looks more aesthetically pleasing without it*/
+  justify-content: center; /*To align at the center*/
+  align-items: center;
+  background-color: rgb(153, 237, 132); /*Color of the background, might change later.*/
+  }
+#General-Calculator{ /*This is meant to keep organization and allow for me to know which calcuator I am coding*/
+  font-family: 'Times New Roman', Times, serif; /*this is the font of the calculator, times new roman firt and then the ohter two are backups*/
+  background-color:rgb(25, 18, 45); /*The background color of the calculator itself*/
+  border-radius: 15px; /*This determines how sharp or round the edges of the calculator are*/
+  max-width: 500px; /*the width of the calculator itself(the background)*/
+  overflow: hidden; /*This is so that mainly when typing a large equation on the box it stays within ranges*/
+}
+#outputBox{
+  width: 100%; /*So that the output box covers the output box where the user enters numbers is covering the entire top of the calculator */
+  padding: 10px; /*Elongating The calculator display box a bit*/
+  font-size: 5rem; /*This actually elongates the output box a little more*/
+  text-align: left;/*where the text will display*/
+  border: none;
+  background-color:rgb(42, 30, 73);
+  color: white; /*The display of the numbers in the output box*/
+}
+#keys{ /*This is calling back the keys id we created in HTML*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);/*1fr tells us that each column should have equal spacing*/
+  gap: 10px; /*How far appart are the buttons from eachother*/
+  padding: 20px; /*how away from the edges the buttons are, also determines how close they are to eachother*/
 
 }
+button{ 
+  width: 100px; /*width of the buttons*/
+  height: 100px; /*height of the buttons*/
+  border-radius: 30px; /*Determines how round or how square-ish the circles are*/
+  border: none; /*So the buttons don't have a border*/
+  background-color: rgb(163, 173, 225); /*The actual color of the buttons*/
+  color: rgb(41, 34, 59); /*Color of the numbers and characters of the buttons*/
+  font-size: 4rem; /*Size of the numbers and characters of the buttons*/
+  font-weight: bold; /*Boldness of the numbers and cahracter so we can see them clearly*/
+  cursor: pointer; /*This is to make the hovering cursor a pointer every time someone hovers over the buttons*/
+} 
+
+/*Graphics Specifically for the buttons that are not under my operaotor class*/
+button:hover{ /*This pseudo-class allows is to add properties when we hover over a button*/
+  background-color:rgb(231, 120, 179) /*allows the colof of the button to change when hovering over it!*/
+}
+button:active{
+  background-color:rgb(240, 160, 203); /*The button when pressed flashes momentarily, giving it a more alive effect!*/
+  /*note: flash is only visible when its not the same color as the hover color*/
+}
+
+/*Graphics specifically for the operators*/
+.operator-button{/*Selecting the class we made in HTML*/
+  background-color: rgb(251, 159, 21);
+}
+.operator-button:hover{/*accesing the hover speudoclass*/
+  background-color: rgb(178, 144, 92);
+}
+.operator-button:active{/*accesing the active speudoclass*/
+  background-color: rgb(191, 166, 130); /*choosing a lighter color for the flash made by pressing the button*/
+}
+
+
+
